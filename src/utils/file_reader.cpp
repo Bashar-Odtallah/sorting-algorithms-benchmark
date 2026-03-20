@@ -28,4 +28,12 @@ void copyArray(int src[], int dst[], int n)
     {
         dst[i] = src[i];
     }
-}
+};
+
+void printArray(int arr[], int n)
+{
+    for (int i{0}; i < n; i++)
+    {
+        cout << arr[i] << endl;
+    }
+};
