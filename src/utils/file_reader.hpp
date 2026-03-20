@@ -4,4 +4,6 @@
 
 void readArray(const string &filename, int arr[], int n);
 
+void copyArray(int src[], int dst[], int n);
+
 #endif
