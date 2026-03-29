@@ -59,3 +59,16 @@ void merge_V1(int arr[], int n)
 {
     mergeSortV1(arr, 0, n - 1);
 }
+
+void mergeSortV2(int arr[], int first, int last)
+{
+    if (first < last)
+    {
+        int mid = (first + last) / 2;
+        mergeSortV2(arr, first, mid);
+        mergeSortV2(arr, mid + 1, last);
+
+        if (arr[mid] > arr[mid + 1])
+            merge(arr, first, mid, last);
+    }
+}
