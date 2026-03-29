@@ -54,3 +54,8 @@ void mergeSortV1(int arr[], int first, int last)
         merge(arr, first, mid, last);
     }
 }
+
+void merge_V1(int arr[], int n)
+{
+    mergeSortV1(arr, 0, n - 1);
+}
