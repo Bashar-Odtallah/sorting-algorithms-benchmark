@@ -12,3 +12,15 @@ using namespace std;
 using namespace std::chrono;
 
 const int SIZE = 100000;
+
+double measureTime(void (*sortFunc)(int[], int), int src[], int n)
+{
+    int temp[SIZE];
+    copyArray(src, temp, n);
+
+    auto start = high_resolution_clock::now();
+    sortFunc(temp, n);
+    auto end = high_resolution_clock::now();
+
+    return duration<double, milli>(end - start).count();
+}
