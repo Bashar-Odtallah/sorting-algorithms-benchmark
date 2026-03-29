@@ -1,4 +1,4 @@
-void swap(int& x, int& y)
+void selectionSwap(int &x, int &y)
 {
     int temp = x;
     x = y;
@@ -21,7 +21,7 @@ void selection_V1(int arr[], int n)
         }
 
         // Swap largest element with arr[last]
-        swap(arr[largestIndex], arr[last]);
+        selectionSwap(arr[largestIndex], arr[last]);
     }
 }
 void selection(int Data[], int n)
@@ -42,7 +42,7 @@ void selection(int Data[], int n)
         // Only swap if needed
         if (smallestIndex != first)
         {
-            swap(Data[first], Data[smallestIndex]);
+            selectionSwap(Data[first], Data[smallestIndex]);
         }
     }
 }
