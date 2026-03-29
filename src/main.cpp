@@ -24,3 +24,27 @@ double measureTime(void (*sortFunc)(int[], int), int src[], int n)
 
     return duration<double, milli>(end - start).count();
 }
+
+void runAndPrint(const string &label, int arr[], int n)
+{
+    cout << "\n"
+         << label << "\n";
+
+    pair<string, void (*)(int[], int)> algorithms[] = {
+        {"bubble_V1", bubble_V1},
+        {"bubble_V2", bubble_V2},
+        {"insertion_V1", insertion_V1},
+        {"insertion_V2", insertion_V2},
+        {"merge_V1", merge_V1},
+        {"merge_V2", merge_V2},
+        {"selection_V1", selection_V1},
+        {"selection_V2", selection_V2},
+    };
+
+    for (auto &[name, func] : algorithms)
+    {
+        double time = measureTime(func, arr, n);
+        cout << left << setw(15) << name << " : "
+             << fixed << setprecision(3) << time << " ms\n";
+    }
+}
