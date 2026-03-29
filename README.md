@@ -1,4 +1,4 @@
-# Sorting Algorthims Benchmark
+# Sorting Algorithms Benchmark
 
 It's a project where we test multiple sorting algorithms `bubble`, `selection`, `insertion` and `merge` and their enhanced variants in term of time it takes to be implemetned using the `chrono` C++ library.
 
