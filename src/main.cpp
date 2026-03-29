@@ -48,3 +48,12 @@ void runAndPrint(const string &label, int arr[], int n)
              << fixed << setprecision(3) << time << " ms\n";
     }
 }
+
+int main()
+{
+    int randomArr[SIZE];
+    int ascArr[SIZE];
+    int descArr[SIZE];
+
+    return 0;
+}
