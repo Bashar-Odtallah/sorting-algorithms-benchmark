@@ -55,5 +55,9 @@ int main()
     int ascArr[SIZE];
     int descArr[SIZE];
 
+    readArray("../data/random_array.txt", randomArr, SIZE);
+    readArray("../data/sorted_ascending.txt", ascArr, SIZE);
+    readArray("../data/sorted_descending.txt", descArr, SIZE);
+
     return 0;
 }
