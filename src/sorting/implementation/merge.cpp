@@ -1,0 +1,45 @@
+#include "../header/merge.hpp"
+
+void merge(int arr[], int first, int mid, int last)
+{
+
+    int tempArray[100000];
+
+    int first1 = first;
+    int last1 = mid;
+    int first2 = mid + 1;
+    int last2 = last;
+    int index = first;
+
+    while (first1 <= last1 && first2 <= last2)
+    {
+        if (arr[first1] < arr[first2])
+        {
+            tempArray[index] = arr[first1];
+            first1++;
+        }
+        else
+        {
+            tempArray[index] = arr[first2];
+            first2++;
+        }
+        index++;
+    }
+
+    while (first1 <= last1)
+    {
+        tempArray[index] = arr[first1];
+        first1++;
+        index++;
+    }
+
+    while (first2 <= last2)
+    {
+        tempArray[index] = arr[first2];
+        first2++;
+        index++;
+    }
+
+    for (int i = first; i <= last; i++)
+        arr[i] = tempArray[i];
+}
