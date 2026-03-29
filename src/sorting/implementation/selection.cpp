@@ -1,4 +1,4 @@
-void swap(int& x, int& y)
+void selectionSwap(int &x, int &y)
 {
     int temp = x;
     x = y;
@@ -8,10 +8,8 @@ void selection_V1(int arr[], int n)
 {
     for (int last = n - 1; last >= 1; --last)
     {
-        // Assume first element is largest
         int largestIndex = 0;
 
-        // Find index of largest element in arr[0..last]
         for (int p = 1; p <= last; ++p)
         {
             if (arr[p] > arr[largestIndex])
@@ -20,29 +18,26 @@ void selection_V1(int arr[], int n)
             }
         }
 
-        // Swap largest element with arr[last]
-        swap(arr[largestIndex], arr[last]);
+        selectionSwap(arr[largestIndex], arr[last]);
     }
 }
-void selection(int Data[], int n)
+void selection_V2(int arr[], int n)
 {
     for (int first = 0; first < n - 1; ++first)
     {
         int smallestIndex = first;
 
-        // Find index of smallest element in Data[first..n-1]
         for (int p = first + 1; p < n; ++p)
         {
-            if (Data[p] < Data[smallestIndex])
+            if (arr[p] < arr[smallestIndex])
             {
                 smallestIndex = p;
             }
         }
 
-        // Only swap if needed
         if (smallestIndex != first)
         {
-            swap(Data[first], Data[smallestIndex]);
+            selectionSwap(arr[first], arr[smallestIndex]);
         }
     }
 }
