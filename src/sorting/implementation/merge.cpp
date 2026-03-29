@@ -43,3 +43,14 @@ void merge(int arr[], int first, int mid, int last)
     for (int i = first; i <= last; i++)
         arr[i] = tempArray[i];
 }
+
+void mergeSortV1(int arr[], int first, int last)
+{
+    if (first < last)
+    {
+        int mid = (first + last) / 2;
+        mergeSortV1(arr, first, mid);
+        mergeSortV1(arr, mid + 1, last);
+        merge(arr, first, mid, last);
+    }
+}
