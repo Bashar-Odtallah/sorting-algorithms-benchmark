@@ -33,3 +33,13 @@ int partition(int T[], int first, int last)
 
     return cutPoint;
 }
+
+void quickSortV1(int T[], int first, int last)
+{
+    if (first < last)
+    {
+        int cut = partition(T, first, last);
+        quickSortV1(T, first, cut);
+        quickSortV1(T, cut + 1, last);
+    }
+}
