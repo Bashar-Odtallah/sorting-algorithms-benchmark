@@ -78,3 +78,8 @@ void quickSortV2(int T[], int first, int last)
         quickSortV2(T, cut + 1, last);
     }
 }
+
+void quick_V2(int arr[], int n)
+{
+    quickSortV2(arr, 0, n - 1);
+}
