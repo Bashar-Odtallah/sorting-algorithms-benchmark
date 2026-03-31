@@ -63,3 +63,18 @@ void insertionForQuick(int arr[], int first, int last)
         arr[j + 1] = key;
     }
 }
+
+void quickSortV2(int T[], int first, int last)
+{
+    if (first < last)
+    {
+        if (last - first <= 10)
+        {
+            insertionForQuick(T, first, last);
+            return;
+        }
+        int cut = partition(T, first, last);
+        quickSortV2(T, first, cut);
+        quickSortV2(T, cut + 1, last);
+    }
+}
