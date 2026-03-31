@@ -6,6 +6,7 @@
 #include "sorting/header/insertion.hpp"
 #include "sorting/header/merge.hpp"
 #include "sorting/header/selection.hpp"
+#include "sorting/header/quick.hpp"
 #include "utils/header/file_reader.hpp"
 
 using namespace std;
@@ -39,6 +40,8 @@ void runAndPrint(const string &label, int arr[], int n)
         {"merge_V2", merge_V2},
         {"selection_V1", selection_V1},
         {"selection_V2", selection_V2},
+        {"quick_V1", quick_V1},
+        {"quick_V2", quick_V2},
     };
 
     for (auto &[name, func] : algorithms)
