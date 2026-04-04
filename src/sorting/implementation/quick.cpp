@@ -77,7 +77,7 @@ void quickSortV2(int T[], int first, int last)
         quickSortV2(T, first, cut);
         quickSortV2(T, cut + 1, last);
     }
-}
+} // comment 2.0
 
 void quick_V2(int arr[], int n)
 {
